@@ -15,20 +15,18 @@
                 <div class="col-lg-4 col-md-6 col-sm-8 col-10 m-auto">
                     <div class="blog-post">
                         <div class="post-thumb">
-                            <a href="{{ .RelPermalink }}">
-                                {{ if isset .Params "image" }}
-                                    <img src="{{ .Params.image | relURL }}" alt="post-image" class="img-fluid">
-                                {{ else }}
-                                    <img src="{{ "/images/background/watch-guts-wallpaper.jpg" | relURL }}" alt="post-image" class="img-fluid">
-                                {{ end }}
-                            </a>
+                            {{ if isset .Params "image" }}
+                                <img src="{{ .Params.image | relURL }}" alt="post-image" class="img-fluid">
+                            {{ else }}
+                                <img src="{{ "/images/background/watch-guts-wallpaper.jpg" | relURL }}" alt="post-image" class="img-fluid">
+                            {{ end }}
                         </div>
                         <div class="post-content">
                             <div class="date">
                                 <h4>{{ .Date.Format "02" }} <span>{{ .Date.Format "Jan" }}</span></h4>
                             </div>
                             <div class="post-title">
-                                <h2><a href="news-single.html">{{ .Title }}</a></h2>
+                                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                             </div>
                             <div class="post-meta">
                                 <ul class="list-inline">
