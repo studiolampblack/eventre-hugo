@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="row">
-            {{ $posts := .Paginate (where site.RegularPages "Type" "in" "site.Params.mainSections" ) }}
+            {{ $posts := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections ) }}
             {{ range first 3 $posts.Pages }}
                 <div class="col-lg-4 col-md-6 col-sm-8 col-10 m-auto">
                     <div class="blog-post">
