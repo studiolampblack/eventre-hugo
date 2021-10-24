@@ -15,22 +15,7 @@
 			{{ partial "about.html" . }}
 			{{ partial "speakers.html" . }}
 			{{ partial "schedule.html" . }}
-			<section class="registration" id="registration">
-				<div class="container-fuild p-0">
-					<div class="row">
-						<div class="col-lg-6 col-md-12 p-0">
-							<div class="service-block bg-service overlay-primary text-center">
-								{{ partial "stats.html" . }}
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-12 p-0">
-							<div class="registration-block bg-registration overlay-dark">
-								{{ partial "registration.html" . }}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			{{ partial "registration-default.html" . }}
 			{{ partial "pricing.html" . }}
 			{{ partial "cta-ticket.html" . }}
 			{{ partial "testimonials.html" . }}
