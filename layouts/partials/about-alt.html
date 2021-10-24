@@ -8,23 +8,19 @@
             </div>
             <div class="col-lg-6 col-md-6 align-self-center ml-lg-auto">
                 <div class="content-block">
-                    <h2>About The <span class="alternate">Eventre</span></h2>
+                    <h2>About <span class="alternate">{{ .Site.Params.About.EventName }}</span></h2>
                     <div class="description-one">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut
-                            labore dolore magna aliqua enim ad
-                        </p>
+                        <p>{{ .Site.Params.About.ParagraphOne }}</p>
                     </div>
                     <div class="description-two">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmtempor incididunt ut
-                            labore et dolore magna aliq enim ad minim</p>
+                        <p>{{ .Site.Params.About.ParagraphTwo }}</p>
                     </div>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="btn btn-main-md">Buy ticket</a>
+                            <a href="#" class="btn btn-main-md">{{ .Site.Params.About.CtaOne }}</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="btn btn-transparent-md">Read more</a>
+                            <a href="#" class="btn btn-transparent-md">{{ .Site.Params.About.CtaTwo }}</a>
                         </li>
                     </ul>
                 </div>
