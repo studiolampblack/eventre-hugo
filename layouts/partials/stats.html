@@ -1,30 +1,11 @@
 <div class="row no-gutters">
+    {{ range .Site.Data.stats }}
     <div class="col-6">
         <!-- Service item -->
         <div class="service-item">
-            <i class="fa fa-microphone"></i>
-            <h5>8 Speakers</h5>
+            <i class="{{ .icon }}"></i>
+            <h5>{{ .text }}</h5>
         </div>
     </div>
-    <div class="col-6">
-        <!-- Service item -->
-        <div class="service-item">
-            <i class="fa fa-flag"></i>
-            <h5>500 + Seats</h5>
-        </div>
-    </div>
-    <div class="col-6">
-        <!-- Service item -->
-        <div class="service-item">
-            <i class="fa fa-ticket"></i>
-            <h5>300 tickets</h5>
-        </div>
-    </div>
-    <div class="col-6">
-        <!-- Service item -->
-        <div class="service-item">
-            <i class="fa fa-calendar"></i>
-            <h5>3 days event</h5>
-        </div>
-    </div>
+    {{ end }}
 </div>
