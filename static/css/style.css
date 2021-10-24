@@ -3148,14 +3148,14 @@ select.form-control:not([size]):not([multiple]) {
   font-size: 15px;
 }
 
-.news .blog-post.single .post-details .quotes {
+.news .blog-post.single .post-details blockquote p {
   background: #f5f5f8;
   padding: 30px;
   border-left: 3px solid #ff6600;
   margin: 15px 0;
 }
 
-.news .blog-post.single .post-details .quotes blockquote {
+.news .blog-post.single .post-details blockquote {
   font-size: 15px;
   font-style: italic;
 }
