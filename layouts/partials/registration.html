@@ -1,7 +1,7 @@
 <div class="block">
     <div class="title text-left">
-        <h3>Register to <span class="alternate">Eventre</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <h3>{{ .Site.Params.Registration.title | default "Register for the event" }}</h3>
+        <p>{{ .Site.Params.Registration.description | default "Lorem ipsum dolor sit amet, consectetur adipisicing elit" }}</p>
     </div>
     <form action="#" class="row">
         <div class="col-md-6">
