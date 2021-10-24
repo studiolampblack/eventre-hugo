@@ -10,34 +10,9 @@
             </div>
         </div>
         <div class="row">
-            {{ $posts := .Paginate (where site.RegularPages "Type" "in" "post") }}
-            {{ range first 3 $posts.Pages }}
+            {{ range first 3 (where .Site.RegularPages "Section" "=" "posts") }}
                 <div class="col-lg-4 col-md-6 col-sm-8 col-10 m-auto">
-                    <div class="blog-post">
-                        <div class="post-thumb">
-                            {{ if isset .Params "image" }}
-                                <img src="{{ .Params.image | relURL }}" alt="post-image" class="img-fluid">
-                            {{ else }}
-                                <img src="{{ "/images/background/watch-guts-wallpaper.jpg" | relURL }}" alt="post-image" class="img-fluid">
-                            {{ end }}
-                        </div>
-                        <div class="post-content">
-                            <div class="date">
-                                <h4>{{ .Date.Format "02" }} <span>{{ .Date.Format "Jan" }}</span></h4>
-                            </div>
-                            <div class="post-title">
-                                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                            </div>
-                            <div class="post-meta">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-user-o"></i>
-                                        <a href="#">{{ with .Params.author }}{{ . }}{{ end }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {{ partial "post-card.html" . }}
                 </div>
             {{ end }}
         </div>
