@@ -3,42 +3,56 @@
     {{ partial "title.html" . }}
     <section class="news section">
         <div class="container">
-            <div class="row justify-content mt-30">
-            {{ range (.Paginate .Pages).Pages }}
-            <div class="col-lg-4 col-md-5 col-sm-8">
-                {{ partial "post-card.html" . }}
-            </div>
-            {{ end }}
-            {{ $paginator := .Paginator }}
-            <div class="col-12 text-center">
-                <div class="d-flex justify-content-center">
-                    <ul class="pagination">
-                            {{ if $paginator.HasPrev }}
-                            <li class="page-item">
-                                <a href="{{ $paginator.Prev.URL }}" class="page-link" aria-label="prev">
-                                    <span aria-hidden="true">
-                                        <i class="fa fa-angle-left"></i>
-                                    </span>
-                                </a>
-                            </li>
+            <div class="row mt-30">
+                <div class="col-lg-8">
+                    <div class="block">
+                        <div class="row">
+                            {{ range (.Paginate .Pages).Pages }}
+                            <div class="col-lg-6 col-md-6 m-auto">
+                                {{ partial "post-card.html" . }}
+                            </div>
                             {{ end }}
-                            {{ range $paginator.Pagers }}
-                            <li class="page-item{{ if eq . $paginator }} active{{ end }}">
-                                <a href="{{ .URL }}" class="page-link">
-                                    <span>{{ .PageNumber }}</span>
-                                </a>
-                            </li>
-                            {{ end }}
-                            {{ if $paginator.HasNext }}
-                            <li class="page-item">
-                                <a href="{{ $paginator.Next.URL }}" class="page-link" aria-label="next">
-                                    <span aria-hidden="true">
-                                        <i class="fa fa-angle-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {{ end }}
-                        </ul>
+                            {{ $paginator := .Paginator }}
+                            <div class="col-12 m-auto m-md-0">
+                                <nav>
+                                    <ul class="pagination">
+                                        {{ if $paginator.HasPrev }}
+                                        <li class="page-item">
+                                            <a href="{{ $paginator.Prev.URL }}" class="page-link" aria-label="prev">
+                                                <span aria-hidden="true">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                        {{ range $paginator.Pagers }}
+                                        <li class="page-item{{ if eq . $paginator }} active{{ end }}">
+                                            <a href="{{ .URL }}" class="page-link">
+                                                <span>{{ .PageNumber }}</span>
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                        {{ if $paginator.HasNext }}
+                                        <li class="page-item">
+                                            <a href="{{ $paginator.Next.URL }}" class="page-link" aria-label="next">
+                                                <span aria-hidden="true">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                    <div class="sidebar">
+                        {{ partial "widgets/search.html" . }}
+                        {{ partial "widgets/categories.html" . }}
+                        {{ partial "widgets/latest-posts.html" . }}
+                        {{ partial "widgets/tags.html" . }}
                     </div>
                 </div>
             </div>
