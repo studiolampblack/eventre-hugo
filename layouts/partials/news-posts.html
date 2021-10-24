@@ -3,9 +3,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3>Eventre <span class="alternate">News</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore
-                        dolore</p>
+                    <h3>{{ .Site.Params.News.title | default "News" }}</h3>
+                    <p>{{ .Site.Params.News.description | default "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore" }}</p>
                 </div>
             </div>
         </div>
