@@ -65,3 +65,13 @@
 <script src="plugins/google-map/gmap.js"></script>
 <!-- Custom Script -->
 <script src="js/script.js"></script>
+    {{ $eventDate := time .Site.Params.EventDate "Asia/Kolkata" }}
+    <script>
+        $('.timer').syotimer({
+            year: {{ $eventDate.Year }},
+            month: {{ printf "%d" $eventDate.Month }},
+            day: {{ $eventDate.Day }},
+            hour: {{ $eventDate.Hour }},
+            minute: {{ $eventDate.Minute }}
+        });
+    </script>
