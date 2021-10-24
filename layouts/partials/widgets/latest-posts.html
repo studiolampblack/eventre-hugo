@@ -1,0 +1,16 @@
+<div class="widget latest-post">
+    <h5 class="widget-header">Latest Posts</h5>
+    {{ range first 5 (where .Site.RegularPages "Section" "=" "posts") }}
+    <div class="media">
+        {{ if isset .Params "image" }}
+        <img src="{{ .Params.image | relURL }}" alt="post-image" class="img-fluid">
+        {{ else }}
+        <img src="{{ "/images/background/watch-guts-wallpaper.jpg" | relURL }}" alt="post-image" class="img-fluid">
+        {{ end }}
+        <div class="media-body">
+            <h6><a href="#">{{ .Title }}</a></h6>
+            <p><span class="fa fa-calendar"></span>{{ .Date.Format "02 Jan, 2006" }}</p>
+        </div>
+    </div>
+    {{ end }}
+</div>

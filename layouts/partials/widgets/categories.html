@@ -1,0 +1,15 @@
+{{ if isset .Site.Taxonomies "categories" }}
+{{ if gt (len .Site.Taxonomies.categories) 0 }}
+<div class="widget category">
+    <h5 class="widget-header">Categories</h5>
+    <ul class="category-list m-0 p-0">
+        {{ $current := . }}
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+            <li {{ if eq $current.RelPermalink ($name | urlize | lower | printf "/categories/%s%") }} class="active"{{ end }}>
+                <a href="{{ "categories/" | relURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}<span class="float-right">({{ len $items }})</span></a>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
+{{ end }}
