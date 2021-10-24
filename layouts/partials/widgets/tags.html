@@ -1,0 +1,16 @@
+{{ if isset .Site.Taxonomies "tags" }}
+    {{ if gt (len .Site.Taxonomies.tags) 0 }}
+    <div class="widget tags">
+        <!-- Widget Header -->
+        <h5 class="widget-header">Popular Tags</h5>
+        <ul class="list-inline">
+            {{ $current := . }}
+            {{ range $name, $items := .Site.Taxonomies.tags }}
+                <li class="list-inline-item">
+                    <a href="{{ "tags/" | relURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+{{ end }}
