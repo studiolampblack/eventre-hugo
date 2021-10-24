@@ -2347,6 +2347,8 @@ select.form-control:not([size]):not([multiple]) {
 
 .map .address-block ul.address-list li span {
   margin-left: 15px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .map .address-block a {
