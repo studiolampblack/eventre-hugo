@@ -65,6 +65,9 @@
 <script src="plugins/google-map/gmap.js"></script>
 <!-- Custom Script -->
 <script src="js/script.js"></script>
+
+
+{{ if .Site.Params.EventDate }}
     {{ $eventDate := time .Site.Params.EventDate "Asia/Kolkata" }}
     <script>
         $('.timer').syotimer({
@@ -75,3 +78,13 @@
             minute: {{ $eventDate.Minute }}
         });
     </script>
+{{ else }}
+    <script>
+        $('.timer').syotimer({
+            date: new Date(2015, 0, 1),
+            periodUnit: "s",
+            periodic: true,
+            periodInterval: 1,
+        })
+    </script>
+{{ end }}
