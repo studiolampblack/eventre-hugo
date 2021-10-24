@@ -1,12 +1,45 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language | default " en" }}">
-
-    {{ partial "head.html" . }}
-
-    <body class="body-wrapper">
-        <div id="content">
-            {{ block "main" . }}{{ end }}
+{{ define "main" }}
+    {{ partial "title.html" . }}
+    <section class="news section">
+        <div class="container">
+            <div class="row mt-30">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="block">
+                        <article class="blog-post single">
+                            <div class="post-thumb">
+                            {{ if isset .Params "image" }}
+                            <img src="{{ .Params.image | relURL }}" alt="post-image" class="img-fluid">
+                            {{ else }}
+                            <img src="{{ "/images/background/watch-guts-wallpaper.jpg" | relURL }}" alt="post-image" class="img-fluid">
+                            {{ end }}
+                            </div>
+                            <div class="post-content">
+                                <div class="date"><h4>{{ .Date.Format "02" }} <span>{{ .Date.Format "Jan" }}</span></h4></div>
+                                <div class="post-title">{{ .Title }}</div>
+                                <div class="post-meta">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-user-o"></i>
+                                            <a href="#">{{ with .Params.author }}{{ . }}{{ end }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="post-details">
+                                    {{ .Content }}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-10 mx-auto">
+                    <div class="sidebar">
+                        {{ partial "widgets/categories.html" . }}
+                        {{ partial "widgets/latest-posts.html" . }}
+                    </div>
+                </div>
+            </div>
         </div>
-        {{ partial "footer.html" . }}
-    </body>
-</html>
+    </section>
+    {{ partial "cta-subscribe.html" . }}
+    {{ partial "google-map.html" . }}
+{{ end }}
