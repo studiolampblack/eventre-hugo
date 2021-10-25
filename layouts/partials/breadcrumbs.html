@@ -15,7 +15,7 @@
         {{ end }}
         {{ if gt (len $part ) 0 }}
         <li class="breadcrumb-item">
-            <a href="/{{ $.Scratch.Get "url" }}">{{ upper (replace $part "posts" "blog") }}</a>
+            <a href="/{{ $.Scratch.Get "url" }}">{{ upper (replace $part "posts" "blog") | humanize }}</a>
         </li>
         {{ end }}
     {{ end }}
