@@ -8,8 +8,14 @@
                             <img src="{{ .Site.Params.Footer.companyLogo }}" alt="logo" class="img-fluid">
                         </a>
                     </div>
-                    <div class="row">
-                        {{ .Site.Params.Footer.companyDescription }}
+                    <div class="row pb-5">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <p>
+                                {{ .Site.Params.Footer.companyDescription }}
+                            </p>
+                        </div>
+                        <div class="col-1"></div>
                     </div>
                     <ul class="social-links-footer list-inline">
                         {{ range .Site.Params.Footer.social }}
