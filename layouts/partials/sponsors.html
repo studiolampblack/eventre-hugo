@@ -17,7 +17,7 @@
                 <div class="block text-center">
                     <!-- Sponsors image list -->
                     <ul class="list-inline sponsors-list">
-                        {{ range .Site.Data.sponsors }}
+                        {{ range where .Site.Data.sponsors "class" "Platinum" }}
                         <li class="list-inline-item">
                             <div class="image-block text-center">
                                 <a href="{{ .url }}">
@@ -25,6 +25,22 @@
                                 </a>
                             </div>
                         </li>   
+                        {{ end }}
+                    </ul>
+                </div><div class="sponsor-title text-center">
+                    <h5>Gold Sponsors</h5>
+                </div>
+                <div class="block text-center">
+                    <!-- Sponsors image list -->
+                    <ul class="list-inline sponsors-list">
+                        {{ range where .Site.Data.sponsors "class" "Gold" }}
+                        <li class="list-inline-item">
+                            <div class="image-block text-center">
+                                <a href="{{ .url }}">
+                                    <img src="{{ .logo }}" alt="sponsors-logo" class="img-fluid">
+                                </a>
+                            </div>
+                        </li>
                         {{ end }}
                     </ul>
                 </div>
