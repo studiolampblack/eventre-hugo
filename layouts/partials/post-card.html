@@ -7,9 +7,11 @@
         {{ end }}
     </div>
     <div class="post-content">
+        {{ if .Date }}
         <div class="date">
             <h4>{{ .Date.Format "02" }} <span>{{ .Date.Format "Jan" }}</span></h4>
-        </div>
+        </div> 
+        {{ end }}
         <div class="post-title">
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         </div>
@@ -17,7 +19,7 @@
             <ul class="list-inline">
                 <li class="list-inline-item">
                     <i class="fa fa-user-o"></i>
-                    <a href="#">{{ with .Params.author }}{{ . }}{{ end }}</a>
+                    <a href="#">{{ with .Params.author | default .Site.Author.name }}{{ . }}{{ end }}</a>
                 </li>
             </ul>
         </div>
