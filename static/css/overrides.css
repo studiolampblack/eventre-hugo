@@ -1,0 +1,12 @@
+.post-content p {
+  margin-bottom: 1.5em;
+  hyphens: auto;
+}
+
+.post-content h2 {
+    font-size: 1.5em;
+}
+
+.post-content h3 {
+    font-size: 1.3em;
+}
