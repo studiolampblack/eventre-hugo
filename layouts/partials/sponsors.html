@@ -12,12 +12,12 @@
             <div class="col-12">
                 <!-- Title -->
                 <div class="sponsor-title text-center">
-                    <h5>Platinum Sponsors</h5>
+                    <h5>{{ .Site.Params.Sponsors.categoryOne }}</h5>
                 </div>
                 <div class="block text-center">
                     <!-- Sponsors image list -->
                     <ul class="list-inline sponsors-list">
-                        {{ range where .Site.Data.sponsors "class" "Platinum" }}
+                        {{ range where .Site.Data.sponsors "class" "class-one" }}
                         <li class="list-inline-item">
                             <div class="image-block text-center">
                                 <a href="{{ .url }}">
@@ -28,12 +28,12 @@
                         {{ end }}
                     </ul>
                 </div><div class="sponsor-title text-center">
-                    <h5>Gold Sponsors</h5>
+                    <h5>{{ .Site.Params.Sponsors.categoryTwo }}</h5>
                 </div>
                 <div class="block text-center">
                     <!-- Sponsors image list -->
                     <ul class="list-inline sponsors-list">
-                        {{ range where .Site.Data.sponsors "class" "Gold" }}
+                        {{ range where .Site.Data.sponsors "class" "class-two" }}
                         <li class="list-inline-item">
                             <div class="image-block text-center">
                                 <a href="{{ .url }}">
