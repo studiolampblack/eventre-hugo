@@ -17,10 +17,10 @@
                     </div>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="btn btn-main-md">{{ .Site.Params.About.CtaOne }}</a>
+                            <a href="{{ .Site.Params.About.CtaOneUrl | default "#" }}" class="btn btn-main-md">{{ .Site.Params.About.CtaOne }}</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="btn btn-transparent-md">{{ .Site.Params.About.CtaTwo }}</a>
+                            <a href="{{ .Site.Params.About.CtaTwoUrl | default "#" }}" class="btn btn-transparent-md">{{ .Site.Params.About.CtaTwo }}</a>
                         </li>
                     </ul>
                 </div>
