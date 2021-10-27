@@ -2,7 +2,7 @@
     <div class="container-fluid p-0">
         <!-- logo -->
         <a class="navbar-brand" href="/">
-            <img src="/images/logo.png" alt="logo">
+            <img src="{{ .Site.Params.Logo | default "/images/logo.png" }}" alt="logo">
         </a>
         {{ partial "navigation.html" . }}
         <a href="{{ .Site.Params.Navigation.ctaUrl | default "/contact/"}}" class="ticket">
