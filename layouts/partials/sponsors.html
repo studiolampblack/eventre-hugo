@@ -45,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="sponsor-btn text-center">
-                    <a href="#" class="btn btn-main-md">Become a sponsor</a>
+                    <a href="{{ .Site.Params.Sponsors.ctaUrl | default "/contact/" }}" class="btn btn-main-md">{{ .Site.Params.Sponsors.cta | default "Become a sponsor" }}</a>
                 </div>
             </div>
         </div>
