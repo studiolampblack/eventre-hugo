@@ -1,6 +1,18 @@
-{{ with .Site.Params.ytIntroVideo }}
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ . }}"
-        allowfullscreen></iframe>
-</div>
+{{ with .Site.Params.Intro }}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Subtitle | markdownify }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube{{ if .EnablePrivacy }}-nocookie{{ end }}.com/embed/{{ .YouTubeId }}/?color=white"
+            allowfullscreen></iframe>
+    </div>
+</section>
 {{ end }}
