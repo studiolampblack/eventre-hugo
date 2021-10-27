@@ -15,7 +15,7 @@
                 <!-- Speaker 1 -->
                 <div class="speaker-item">
                     <div class="image">
-                        <img src="{{ .image }}" alt="speaker" class="img-fluid">
+                        <img src="{{ .image }}" alt="{{ .altText | default "speaker" }}" class="img-fluid">
                         <div class="primary-overlay"></div>
                         <div class="socials">
                             <ul class="list-inline">
