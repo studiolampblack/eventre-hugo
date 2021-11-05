@@ -10,3 +10,28 @@
 .post-content h3 {
     font-size: 1.3em;
 }
+
+.mailchimp-form {
+  margin-bottom: 1em;
+}
+
+.mailchimp-form ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.mailchimp-form ul li {
+  line-height: 1.5;
+}
+
+.mailchimp-form label, .mailchimp-form p {
+  margin-bottom: 0.5em;
+}
+
+.mailchimp-form h2 {
+  margin-bottom: 1.5em;
+}
+
+.mailchimp-form ::placeholder {
+  color: #bbb;
+}
