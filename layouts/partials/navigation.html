@@ -11,13 +11,13 @@
                 <a class="nav-link" href="#!" data-toggle="dropdown">{{ .Name }} <i class="fa fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     {{ range .Children }}
-                        <li><a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a></li>
+                        <li><a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
             </li>
             {{ else }}
             <li class="nav-item">
-                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                <a class="nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
             </li>
             {{ end }}
         {{ end }}
