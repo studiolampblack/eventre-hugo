@@ -123,7 +123,7 @@ ul.social-links li a i {
 }
 
 .text-overlay:after {
-  /* content: 'CONFERENCE'; */
+  content: 'CONFERENCE';
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 215px;
@@ -185,7 +185,7 @@ ul.social-links li a i {
   content: '';
   width: 100%;
   margin-left: -45%;
-  background: white;
+  background: rgba(255,255,255,0.7);
   position: absolute;
   top: 0;
   left: 0;
