@@ -9,7 +9,7 @@
                     </div>
                     <!-- Coundown Timer -->
                     <div class="timer"></div>
-                    <a href="#" class="btn btn-main-md">{{ .Site.Params.Ticket.action | default "Buy Ticket" }}</a>
+                    <a href="{{ .Site.Params.Ticket.actionUrl }}" class="btn btn-main-md">{{ .Site.Params.Ticket.action | default "Buy Ticket" }}</a>
                 </div>
             </div>
             <div class="col-lg-5 p-0">

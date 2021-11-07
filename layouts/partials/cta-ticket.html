@@ -6,7 +6,7 @@
                 <div class="content-block">
                     <h2>{{ .Site.Params.Ticket.title | default "Limited audience seats" }}</h2>
                     <p>{{ .Site.Params.Ticket.description | default "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm" }}</p>
-                    <a href="" class="btn btn-main-md">{{ .Site.Params.Ticket.action | default "Buy Ticket" }}</a>
+                    <a href="{{ .Site.Params.Ticket.actionUrl }}" class="btn btn-main-md">{{ .Site.Params.Ticket.action | default "Buy Ticket" }}</a>
                 </div>
             </div>
         </div>
