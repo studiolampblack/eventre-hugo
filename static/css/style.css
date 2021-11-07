@@ -123,7 +123,7 @@ ul.social-links li a i {
 }
 
 .text-overlay:after {
-  content: 'CONFERENCE';
+  /* content: 'CONFERENCE'; */
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 215px;
@@ -235,7 +235,7 @@ button:hover {
 }
 
 .bg-banner-two {
-  background: url(../images/background/banner-bg-two.jpg) no-repeat;
+  background: url(https://content.iptex-grindex.com/images/backgrounds/banner-bg-two.JPG) no-repeat;
   background-size: cover;
   background-position: right center;
 }
