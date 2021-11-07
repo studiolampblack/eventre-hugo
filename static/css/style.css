@@ -3108,7 +3108,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .news .blog-post .post-content .post-meta ul {
-  margin-bottom: 0;
+  margin-bottom: 0.7em;
 }
 
 .news .blog-post .post-content .post-meta ul li i {
@@ -3142,7 +3142,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .news .blog-post.single .post-meta {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 
 .news .blog-post.single .post-details p {
