@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-5 col-md-6 align-self-center">
                 <div class="image-block two bg-about">
-                    <img class="img-fluid" src="images/speakers/featured-speaker-two.jpg" alt="">
+                    <img class="img-fluid" src="{{ .Site.Params.About.Image | default "images/speakers/featured-speaker-two.jpg" }}" alt="About {{ .Site.Params.About.EventName }}">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 align-self-center ml-lg-auto">
