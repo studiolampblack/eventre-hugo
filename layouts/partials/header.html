@@ -5,9 +5,5 @@
             <img src="{{ .Site.Params.Logo | default "/images/logo.png" }}" alt="logo">
         </a>
         {{ partial "navigation.html" . }}
-        <a href="{{ .Site.Params.Navigation.ctaUrl | default "/contact/"}}" class="ticket">
-            <img src="/images/icon/ticket.png" alt="ticket">
-            <span>{{ .Site.Params.Navigation.cta }}</span>
-        </a>
     </div>
 </nav>

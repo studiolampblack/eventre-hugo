@@ -22,4 +22,8 @@
             {{ end }}
         {{ end }}
     </ul>
+    <a href="{{ .Site.Params.Navigation.ctaUrl | default " /contact/"}}" class="ticket">
+        <img src="/images/icon/ticket.png" alt="ticket">
+        <span>{{ .Site.Params.Navigation.cta }}</span>
+    </a>
 </div>
