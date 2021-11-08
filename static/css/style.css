@@ -585,7 +585,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .main-nav .navbar-brand {
-  padding: 35px 40px 35px 50px;
+  padding: 0px 40px 0px 50px;
   border-right: 1px solid #e5e5e5;
 }
 
