@@ -4,7 +4,7 @@
         <p>{{ .Site.Params.Registration.description | default "Lorem ipsum dolor sit amet, consectetur adipisicing elit" }}</p>
     </div>
     <script type="text/javascript">var submitted = false;</script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location={{ .Site.Params.Registration.confirmation }}';}"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='{{ .Site.Params.Registration.confirmation }}';}"></iframe>
     <form action="{{ .Site.Params.Registration.endpoint }}" class="row" method="post" target="hidden_iframe" onsubmit="submitted=true;">
         <div class="col-md-6">
             <input name="{{ .Site.Params.Registration.name }}" type="text" class="form-control main" placeholder="Your Name">
