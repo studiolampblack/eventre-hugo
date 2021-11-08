@@ -258,7 +258,7 @@ button:hover {
 }
 
 .bg-timer {
-  background: url(https://content.iptex-grindex.com/images/backgrounds/timer-bg.JPG) no-repeat;
+  background: url(https://content.iptex-grindex.com/images/backgrounds/timer-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -296,7 +296,7 @@ button:hover {
 }
 
 .bg-subscribe {
-  background: url(https://content.iptex-grindex.com/images/backgrounds/newsletter-bg.JPG) fixed no-repeat;
+  background: url(https://content.iptex-grindex.com/images/backgrounds/newsletter-bg.jpg) fixed no-repeat;
   background-size: cover;
   background-position: center center;
 }
