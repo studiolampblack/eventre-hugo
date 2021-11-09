@@ -3649,9 +3649,6 @@ ul.pagination .active a {
 .testimonial .testimonial-item .comment:hover {
   background: #34546f;
   border: 1px solid #34546f;
-}
-
-.testimonial .testimonial-item .comment:hover p {
   color: #fff;
 }
 
