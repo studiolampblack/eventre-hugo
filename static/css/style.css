@@ -185,7 +185,7 @@ ul.social-links li a i {
   content: '';
   width: 100%;
   margin-left: -45%;
-  background: rgba(255,255,255,0);
+  background: rgba(255,255,255,0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -947,7 +947,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .subfooter .copyright-text p a {
-  color: #34546f;
+  color: #7c90a2;
 }
 
 @media (max-width: 767px) {
@@ -1111,7 +1111,7 @@ select.form-control:not([size]):not([multiple]) {
 .banner .block h1 {
   text-transform: uppercase;
   font-size: 5.5rem;
-  color: #34546f;
+  color: #fff;
   font-weight: 500;
   margin-bottom: 5px;
   text-shadow: 3.5px 6.062px 0px rgba(0, 0, 0, 0.1);
