@@ -35,3 +35,7 @@
 .mailchimp-form ::placeholder {
   color: #bbb;
 }
+
+.footer-main p, .subfooter p {
+  color: #adb5bd;
+}
