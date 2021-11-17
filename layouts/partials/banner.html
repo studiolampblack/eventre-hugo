@@ -5,10 +5,10 @@
                 <!-- Content Block -->
                 <div class="block">
                     <!-- Coundown Timer -->
-                    <div class="timer"></div>
                     <h1>{{ .Site.Params.Banner.Title | default "Business" }}</h1>
                     <h2>{{ .Site.Params.Banner.Subtitle | default "Conference" }} {{ (time .Site.Params.EventDate).Year | default now.Year }}</h2>
                     <h6>{{ .Site.Params.Banner.DateRangeAndYear | default "02–05 July 2017, California" }}</h6>
+                    <div class="timer"></div>
                     <!-- Action Button -->
                     <a href="{{ .Site.Params.Banner.ticketCtaUrl }}" class="btn btn-white-md">{{ .Site.Params.Banner.TicketCta | default "get ticket now" }}</a>
                 </div>
