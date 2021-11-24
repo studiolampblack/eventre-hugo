@@ -229,13 +229,13 @@ button:hover {
 }
 
 .bg-banner-one {
-  background: url(../images/background/homepage-one-banner.jpg) no-repeat;
+  background: url(https://content.iptex-grindex.com/images/backgrounds/homepage-one-banner.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .bg-banner-two {
-  background: url(https://content.iptex-grindex.com/images/backgrounds/banner-bg-two.JPG) no-repeat;
+  background: url(https://content.iptex-grindex.com/images/backgrounds/banner-bg-two.jpg) no-repeat;
   background-size: cover;
   background-position: right center;
 }
