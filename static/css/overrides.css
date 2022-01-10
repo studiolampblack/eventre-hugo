@@ -39,3 +39,7 @@
 .footer-main p, .subfooter p {
   color: #adb5bd;
 }
+
+.news .container img {
+  max-width: 100%;
+}
